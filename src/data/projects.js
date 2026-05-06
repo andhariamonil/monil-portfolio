@@ -1,9 +1,35 @@
 const projects = [
   {
+    title: 'KnowledgeAI – Internal Knowledge Assistant',
+    description:
+      'AI-powered internal knowledge assistant SaaS platform that enables organizations to query their private documents using natural language. Built with hybrid RAG architecture combining semantic vector search and keyword search with role-based access control.',
+    technologies: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'pgvector', 'Groq API', 'JWT'],
+    features: [
+      'Hybrid RAG pipeline with semantic and keyword search',
+      'Role-based access control (Admin, Mentor, Trainee)',
+      'Document ingestion — PDF, DOCX, MD, CSV, TXT',
+      'AI-powered Q&A with source attribution',
+      'Chat session history with pgvector indexing',
+    ],
+    github: 'https://github.com/andhariamonil/KnowledgeAi.git',
+    live: '',
+    source: 'github',
+    images: [
+  '/UI/KnowledgeAi/login.png',
+  '/UI/KnowledgeAi/signup.png',
+  '/UI/KnowledgeAi/adminDashboard.png',
+  '/UI/KnowledgeAi/adminDocument.png',
+  '/UI/KnowledgeAi/adminPanel.png',
+  '/UI/KnowledgeAi/traineeDashboard.png',
+  '/UI/KnowledgeAi/traineeDocument.png',
+  '/UI/KnowledgeAi/aiAssistant.png'
+],
+  },
+  {
     title: 'NoteMate – Smart Note & Task Manager',
     description:
       'AI-powered note-taking application with semantic search and intelligent task extraction using RAG architecture.',
-    technologies: ["Node.js", "Express.js", "PostgreSQL", "Pgvector", "OpenAI API"],
+    technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'Pgvector', 'OpenAI API'],
     features: [
       'Semantic search',
       'Intelligent task extraction',
@@ -13,6 +39,7 @@ const projects = [
     github: 'https://github.com/andhariamonil/NoteMate-Backend',
     live: '',
     source: 'local',
+    images: [],
   },
   {
     title: 'Architect Portfolio Website',
@@ -27,6 +54,7 @@ const projects = [
     github: 'https://github.com/andhariamonil/architect-portfolio-website',
     live: '',
     source: 'github',
+    images: [],
   },
   {
     title: 'Accounting Web App',
@@ -41,21 +69,8 @@ const projects = [
     github: 'https://github.com/andhariamonil/Accounting-app',
     live: '',
     source: 'github',
+    images: [],
   },
-  // {
-  //   title: 'Transaction & Account Management System',
-  //   description:
-  //     'Application to manage financial transactions and accounts with real-time tracking features.',
-  //   technologies: ['Python', 'SQL', 'HTML', 'CSS'],
-  //   features: [
-  //     'Financial transaction management',
-  //     'Account tracking',
-  //     'Real-time features',
-  //   ],
-  //   github: 'https://github.com/andhariamonil/Accounting-app',
-  //   live: '',
-  //   source: 'local',
-  // },
   {
     title: 'Face Mask Detection using Deep Learning',
     description:
@@ -65,6 +80,7 @@ const projects = [
     github: 'https://github.com/andhariamonil/Face_mask_detection',
     live: '',
     source: 'local',
+    images: [],
   },
   {
     title: 'ML-Based EV Sales Prediction',
@@ -81,6 +97,7 @@ const projects = [
     github: '',
     live: '',
     source: 'local',
+    images: [],
   },
   {
     title: 'Social Media Analytics Dashboard',
@@ -95,35 +112,8 @@ const projects = [
     github: '',
     live: '',
     source: 'local',
+    images: [],
   },
-  // {
-  //   title: "NoteMate – Frontend",
-  //   description:
-  //     "React-based frontend for the NoteMate AI notes application with interactive UI for note management, semantic search, and AI chatbot integration.",
-  //   technologies: ["React", "JavaScript", "CSS"],
-  //   features: [
-  //     "Modern dashboard for managing notes",
-  //     "Semantic search interactions",
-  //     "Chat-style AI assistant UI"
-  //   ],
-  //   github: "https://github.com/andhariamonil/NoteMate-Frontend",
-  //   live: "",
-  //   source: "github"
-  // },
-  // {
-  //   title: "NoteMate – Backend",
-  //   description:
-  //     "Node.js and Express backend for NoteMate that implements Retrieval-Augmented Generation (RAG) using OpenAI embeddings and pgvector for semantic search.",
-  //   technologies: ["Node.js", "Express.js", "PostgreSQL", "Pgvector", "OpenAI API"],
-  //   features: [
-  //     "RAG pipeline for semantic note retrieval",
-  //     "Vector search with pgvector",
-  //     "RESTful APIs for notes and chat"
-  //   ],
-  //   github: "https://github.com/andhariamonil/NoteMate-Backend",
-  //   live: "",
-  //   source: "github"
-  // },
   {
     title: 'Sentiment Analysis on Tweets',
     description:
@@ -137,13 +127,13 @@ const projects = [
     github: 'https://github.com/andhariamonil/Sentiment-analysis-Tweets',
     live: '',
     source: 'github',
+    images: [],
   },
-  ,
   {
     title: 'QuickTube – AI YouTube Assistant',
     description:
       'AI-powered YouTube learning assistant that uses NLP, semantic search, and Retrieval-Augmented Generation (RAG) to answer questions and summarize video transcripts.',
-    technologies: ['node.js', 'Huggingface api','claude api', 'RAG'],
+    technologies: ['Node.js', 'Huggingface API', 'Claude API', 'RAG'],
     features: [
       'Semantic search over YouTube transcripts',
       'Question answering with RAG',
@@ -152,6 +142,7 @@ const projects = [
     github: 'https://github.com/andhariamonil/Quicktube',
     live: '',
     source: 'github',
+    images: [],
   },
 ];
 

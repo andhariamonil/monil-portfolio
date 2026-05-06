@@ -1,6 +1,20 @@
 function ProjectCard({ project }) {
+  const thumbnail = project.images && project.images.length > 0 ? project.images[0] : null;
+
   return (
     <div className="project-card">
+      {thumbnail ? (
+        <img
+          src={thumbnail}
+          alt={`${project.title} preview`}
+          className="project-thumbnail"
+        />
+      ) : (
+        <div className="project-thumbnail-placeholder">
+          <span>{project.title.charAt(0)}</span>
+        </div>
+      )}
+
       <h3>{project.title}</h3>
 
       <p>{project.description}</p>
