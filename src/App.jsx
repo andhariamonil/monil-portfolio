@@ -1,6 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Components
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop'; // Import the new component
+
+// Pages
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
@@ -12,6 +16,12 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <BrowserRouter>
+      {/* 
+          ScrollToTop must sit inside BrowserRouter but outside Routes. 
+          This ensures every time the URL changes, the window scrolls to (0,0).
+      */}
+      <ScrollToTop />
+      
       <Navbar />
 
       <Routes>

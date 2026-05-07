@@ -1,8 +1,7 @@
 const projects = [
   {
     title: 'KnowledgeAI – Internal Knowledge Assistant',
-    description:
-      'AI-powered internal knowledge assistant SaaS platform that enables organizations to query their private documents using natural language. Built with hybrid RAG architecture combining semantic vector search and keyword search with role-based access control.',
+    description: 'AI-powered internal knowledge assistant SaaS platform that enables organizations to query their private documents using natural language. Built with hybrid RAG architecture combining semantic vector search and keyword search with role-based access control.',
     technologies: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'pgvector', 'Groq API', 'JWT'],
     features: [
       'Hybrid RAG pipeline with semantic and keyword search',
@@ -11,31 +10,29 @@ const projects = [
       'AI-powered Q&A with source attribution',
       'Chat session history with pgvector indexing',
     ],
+    challenges: "The primary challenge was reducing hallucinations in AI responses and ensuring that the RAG pipeline only retrieved contextually relevant document chunks from the vector database.",
+    solutions: "Implemented a hybrid search approach combining pgvector for semantic similarity and traditional keyword search to improve retrieval accuracy. I also added a strict system prompt to the Groq API to ensure responses include source attribution.",
     github: 'https://github.com/andhariamonil/KnowledgeAi.git',
     live: '',
     source: 'github',
     images: [
-  '/UI/KnowledgeAi/login.png',
-  '/UI/KnowledgeAi/signup.png',
-  '/UI/KnowledgeAi/adminDashboard.png',
-  '/UI/KnowledgeAi/adminDocument.png',
-  '/UI/KnowledgeAi/adminPanel.png',
-  '/UI/KnowledgeAi/traineeDashboard.png',
-  '/UI/KnowledgeAi/traineeDocument.png',
-  '/UI/KnowledgeAi/aiAssistant.png'
-],
+      '/UI/KnowledgeAi/login.png',
+      '/UI/KnowledgeAi/signup.png',
+      '/UI/KnowledgeAi/adminDashboard.png',
+      '/UI/KnowledgeAi/adminDocument.png',
+      '/UI/KnowledgeAi/adminPanel.png',
+      '/UI/KnowledgeAi/traineeDashboard.png',
+      '/UI/KnowledgeAi/traineeDocument.png',
+      '/UI/KnowledgeAi/aiAssistant.png'
+    ],
   },
   {
     title: 'NoteMate – Smart Note & Task Manager',
-    description:
-      'AI-powered note-taking application with semantic search and intelligent task extraction using RAG architecture.',
+    description: 'AI-powered note-taking application with semantic search and intelligent task extraction using RAG architecture.',
     technologies: ['Node.js', 'Express.js', 'PostgreSQL', 'Pgvector', 'OpenAI API'],
-    features: [
-      'Semantic search',
-      'Intelligent task extraction',
-      'RAG architecture',
-      'AI-powered notes',
-    ],
+    features: ['Semantic search', 'Intelligent task extraction', 'RAG architecture', 'AI-powered notes'],
+    challenges: "Automatically identifying and extracting actionable tasks from messy, unstructured notes was difficult using standard regex.",
+    solutions: "Leveraged OpenAI's function calling to parse note text into structured JSON, which allows the system to reliably identify deadlines and task descriptions even in conversational text.",
     github: 'https://github.com/andhariamonil/NoteMate-Backend',
     live: '',
     source: 'local',
@@ -43,14 +40,11 @@ const projects = [
   },
   {
     title: 'Architect Portfolio Website',
-    description:
-      'Modern and responsive architecture portfolio website built with React, featuring animated sections for showcasing architectural projects, services, and team information.',
+    description: 'Modern and responsive architecture portfolio website built with React, featuring animated sections for showcasing architectural projects, services, and team information.',
     technologies: ['React', 'JavaScript', 'CSS'],
-    features: [
-      'Animated landing page for architects',
-      'Responsive project and services sections',
-      'Clean, professional portfolio layout',
-    ],
+    features: ['Animated landing page', 'Responsive project sections', 'Clean layout'],
+    challenges: "Maintaining high performance while handling high-resolution architectural imagery and complex scroll animations.",
+    solutions: "Used lazy loading for all project images and optimized CSS transitions to ensure 60fps animations across both desktop and mobile browsers.",
     github: 'https://github.com/andhariamonil/architect-portfolio-website',
     live: '',
     source: 'github',
@@ -58,14 +52,11 @@ const projects = [
   },
   {
     title: 'Accounting Web App',
-    description:
-      'Flask-based accounting web application to manage accounts, record transactions, track debts, and generate simple financial reports.',
+    description: 'Flask-based accounting web application to manage accounts, record transactions, track debts, and generate simple financial reports.',
     technologies: ['Python', 'Flask', 'HTML', 'CSS'],
-    features: [
-      'Account and transaction management',
-      'Debt tracking',
-      'Basic reporting views',
-    ],
+    features: ['Account management', 'Debt tracking', 'Basic reporting'],
+    challenges: "Ensuring data integrity for financial transactions and managing complex mathematical calculations for debt balancing in a stateless web environment.",
+    solutions: "Implemented database transactions to prevent partial data writes and built a custom Python utility class to handle all ledger calculations with high precision.",
     github: 'https://github.com/andhariamonil/Accounting-app',
     live: '',
     source: 'github',
@@ -73,10 +64,11 @@ const projects = [
   },
   {
     title: 'Face Mask Detection using Deep Learning',
-    description:
-      'Deep learning model that detects whether people are wearing masks in images.',
+    description: 'Deep learning model that detects whether people are wearing masks in images.',
     technologies: ['Python', 'CNN', 'LSTM'],
     features: ['Mask detection', 'Image processing', 'Deep learning'],
+    challenges: "The model struggled with 'False Negatives' when faces were partially occluded or in low-lighting conditions.",
+    solutions: "Applied data augmentation techniques like brightness adjustment and random rotation to the training set, significantly improving model robustness in real-world scenarios.",
     github: 'https://github.com/andhariamonil/Face_mask_detection',
     live: '',
     source: 'local',
@@ -84,16 +76,11 @@ const projects = [
   },
   {
     title: 'ML-Based EV Sales Prediction',
-    description:
-      'Machine learning application that predicts electric vehicle sales using regression models.',
-    technologies: [
-      'Python',
-      'Scikit-learn',
-      'Pandas',
-      'Linear Regression',
-      'Random Forest',
-    ],
+    description: 'Machine learning application that predicts electric vehicle sales using regression models.',
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'Linear Regression', 'Random Forest'],
     features: ['EV sales prediction', 'Regression models', 'Data analysis'],
+    challenges: "Handling highly non-linear data trends and seasonality in EV market adoption rates.",
+    solutions: "Compared multiple models and found that the Random Forest Regressor performed best by capturing complex feature interactions that simple Linear Regression missed.",
     github: '',
     live: '',
     source: 'local',
@@ -101,14 +88,11 @@ const projects = [
   },
   {
     title: 'Social Media Analytics Dashboard',
-    description:
-      'Interactive dashboard for analyzing social media engagement metrics.',
+    description: 'Interactive dashboard for analyzing social media engagement metrics.',
     technologies: ['Power BI'],
-    features: [
-      'Social media analytics',
-      'Interactive dashboard',
-      'Engagement metrics',
-    ],
+    features: ['Social media analytics', 'Interactive dashboard', 'Engagement metrics'],
+    challenges: "Merging disparate data sources from different platforms into a unified data model without duplicate entries.",
+    solutions: "Used Power Query to clean and transform the data, creating a robust Star Schema that allowed for seamless cross-platform engagement analysis.",
     github: '',
     live: '',
     source: 'local',
@@ -116,14 +100,11 @@ const projects = [
   },
   {
     title: 'Sentiment Analysis on Tweets',
-    description:
-      'NLP project for sentiment analysis of tweets using text preprocessing, feature extraction (TF-IDF / Bag-of-Words), and machine learning models.',
+    description: 'NLP project for sentiment analysis of tweets using text preprocessing, feature extraction (TF-IDF / Bag-of-Words), and machine learning models.',
     technologies: ['Python', 'NLP', 'Scikit-learn'],
-    features: [
-      'Tweet text preprocessing pipeline',
-      'Feature extraction with TF-IDF/BoW',
-      'Models like Logistic Regression and Naive Bayes',
-    ],
+    features: ['Preprocessing pipeline', 'TF-IDF extraction', 'ML models'],
+    challenges: "Processing 'Twitter slang', emojis, and abbreviations which often break standard NLP tokenization.",
+    solutions: "Developed a custom preprocessing script using NLTK and Regex to clean tweet-specific noise before passing the data to the Naive Bayes classifier.",
     github: 'https://github.com/andhariamonil/Sentiment-analysis-Tweets',
     live: '',
     source: 'github',
@@ -131,14 +112,11 @@ const projects = [
   },
   {
     title: 'QuickTube – AI YouTube Assistant',
-    description:
-      'AI-powered YouTube learning assistant that uses NLP, semantic search, and Retrieval-Augmented Generation (RAG) to answer questions and summarize video transcripts.',
+    description: 'AI-powered YouTube learning assistant that uses NLP, semantic search, and Retrieval-Augmented Generation (RAG) to answer questions and summarize video transcripts.',
     technologies: ['Node.js', 'Huggingface API', 'Claude API', 'RAG'],
-    features: [
-      'Semantic search over YouTube transcripts',
-      'Question answering with RAG',
-      'Summaries of long-form video content',
-    ],
+    features: ['Semantic search', 'Question answering', 'Video summarization'],
+    challenges: "Handling extremely long video transcripts that exceeded the context window limits of the LLM.",
+    solutions: "Implemented a recursive summarization technique where the transcript is chunked, summarized individually, and then synthesized into a final concise output.",
     github: 'https://github.com/andhariamonil/Quicktube',
     live: '',
     source: 'github',

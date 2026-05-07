@@ -1,47 +1,26 @@
 export default function Contact() {
+  const socials = [
+    { name: "Email", link: "mailto:andhariamonil3@gmail.com", icon: "📧", label: "andhariamonil3@gmail.com" },
+    { name: "GitHub", link: "https://github.com/andhariamonil", icon: "🐙", label: "github.com/andhariamonil" },
+    { name: "LinkedIn", link: "https://linkedin.com/in/monilandharia", icon: "💼", label: "linkedin.com/monil" }
+  ];
+
   return (
-    <section className="contact">
-      <h2>Contact</h2>
-
-      <p>
-        Interested in working together or have a project in mind? Feel free to
-        reach out.
-      </p>
-
-      <div className="contact-box">
-        {/* <p>
-          Phone:{" "}
-          <a href="tel:+919408081644">
-            +91 94080 81644
-          </a>
-        </p> */}
-
-        <p>
-          Email:{' '}
-          <a href="mailto:andhariamonil3@gmail.com">andhariamonil3@gmail.com</a>
-        </p>
-
-        <p>
-          GitHub:{' '}
-          <a
-            href="https://github.com/andhariamonil"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            github.com/andhariamonil
-          </a>
-        </p>
-
-        <p>
-          LinkedIn:{' '}
-          <a
-            href="https://www.linkedin.com/in/monilandharia/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin.com/in/monilandharia
-          </a>
-        </p>
+    <section className="contact-v2">
+      <div className="contact-container">
+        <h2>Let's <span>Connect</span></h2>
+        <p>Currently looking for new opportunities or collaborative projects.</p>
+        <div className="social-grid">
+          {socials.map((s, i) => (
+            <a key={i} href={s.link} target="_blank" rel="noreferrer" className="social-card">
+              <span className="social-icon">{s.icon}</span>
+              <div className="social-info">
+                <span className="social-name">{s.name}</span>
+                <span className="social-link-text">{s.label}</span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
